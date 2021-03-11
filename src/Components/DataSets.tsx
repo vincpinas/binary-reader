@@ -1,11 +1,5 @@
-interface wordArrays {
-    easywords: string[];
-    normalwords: string[];
-    hardwords: string[];
-}
-
-export const WordDataSets: wordArrays = {
-    easywords: ["eat", "cook", "cool", "no", "dog", "age", "foo", "fat", "dry", "fact", "fang", "bee"],
-    normalwords: ["house"],
-    hardwords: ["fabulous", "radioactive", "uzbekistan", "incomprehensible", "failure"]
+export const WordDataSets: { easy: string[]; normal: string[]; hard: string[]; } = {
+    easy: ["eat", "cook", "cool", "no", "dog", "age", "foo", "fat", "dry", "fact", "fang", "bee"],
+    normal: ["house"],
+    hard: ["fabulous", "radioactive", "uzbekistan", "incomprehensible", "failure"]
 }

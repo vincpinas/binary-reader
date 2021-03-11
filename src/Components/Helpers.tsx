@@ -9,3 +9,9 @@ export const binaryToString = (string: string) => {
         return String.fromCharCode(parseInt(bin, 2));
     }).join('');
 }
+
+export const chooseDataSet = (difficulty: string, dataSets: any) => {
+    if (difficulty === 'easy') return dataSets.easy
+    else if (difficulty === 'normal') return dataSets.normal
+    else if (difficulty === 'hard') return dataSets.hard
+}

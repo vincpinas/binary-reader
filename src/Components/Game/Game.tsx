@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Game.css'
 
-import { textToBinary } from '../Helpers'
+import { textToBinary, chooseDataSet } from '../Helpers'
 import { WordDataSets } from '../DataSets'
 import UserInfo from '../UserInfo/UserInfo'
 
@@ -20,13 +20,7 @@ interface gameProps {
 }
 
 const Game = ({...props}: gameProps) => {
-    const gameDataSet = (difficulty: string) => {
-        if (difficulty === 'easy') return WordDataSets.easywords
-        else if (difficulty === 'normal') return WordDataSets.normalwords
-        else if (difficulty === 'hard') return WordDataSets.hardwords
-    }
-
-    const currentGameDataSet: any = gameDataSet(props.difficulty)
+    const currentGameDataSet: any = chooseDataSet(props.difficulty, WordDataSets)
     currentGameDataSet.map((word: string) => {
         return (
             console.log(word), 
