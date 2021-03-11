@@ -1,0 +1,109 @@
+.c-user-info {
+    padding: 25px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    border-right: 2px solid #4d4d4d70;
+}
+
+.userRankImg, .userRankImg img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+
+.userInfoText {
+    border-bottom: 2px solid gray;
+    padding: 10px;
+}
+
+.userInfoStats {
+    text-align: left;
+    border-bottom: 2px solid #808080;
+    padding: 10px;
+}
+
+.userInfoHighScore {
+    padding: 10px;
+}
+
+.Novice {
+    color: #808080;
+}
+
+.NoviceBorder {
+    border-bottom: 2px solid #808080;
+}
+
+.Beginner {
+    color: #ffffff;
+}
+
+.BeginnerBorder {
+    border-bottom: 2px solid #ffffff;
+}
+
+.Intermediate {
+    color: #ffa500;
+}
+
+.IntermediateBorder {
+    border-bottom: 2px solid #ffa500;
+}
+
+.Expert {
+    color: #ff6565;
+}
+
+.ExpertBorder {
+    border-bottom: 2px solid #ff6565;
+}
+
+.Master {
+    color: #be2c2c;
+}
+
+.MasterBorder {
+    border-bottom: 2px solid #be2c2c;
+}
+
+@media screen and (max-width: 800px) {
+    .c-user-info {
+        flex-direction: row;
+        height: fit-content;
+        width: 100%;
+        border: none;
+        justify-content: space-around;
+        padding: 5px;
+    }
+
+    .infoWrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .userRankImg, .userRankImg img {
+        height: 90px;
+        width: 90px;
+        margin-right: 1rem;
+    }
+
+    .userInfoText {
+        padding: 5px;
+        height: fit-content;
+    }
+
+    .userInfoStats {
+        padding: 5px;
+        height: fit-content;
+    }
+
+    .userInfoHighScore {
+        padding: 5px;
+        height: fit-content;
+    }
+}
