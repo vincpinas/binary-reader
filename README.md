@@ -16,14 +16,11 @@ The main goal in this game is to translate the random set of text in binary to a
 
 ---
 ## Needed Components
-Router
-Join Page
-Introduction
-User Information
 | Component    | Description                                                             |
 | :-:          | -                                                                       |
-| Router       | Contains all the main routers and passes the highest props.             |
-| Join Page    | Initializes the user info object.                                       |
+| Router       | Contains all the main routes and passes the highest props.              |
+| Join Page    | A warm welcome with a username input.                                   |
+| Difficulty   | Sets the difficulty which changes the length of the words.              |
 | Introduction | Gives a general introduction on how the game works.                     |
 | User Info    | Displays the game info about the user.                                  |
 | Game         | Contains the main game and most of the other components apart from join |

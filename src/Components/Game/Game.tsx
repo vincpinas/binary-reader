@@ -10,13 +10,13 @@ interface gameProps {
     difficulty: string;
     userName: string;
     rank: string;
-    setRank: any;
+    setRank(rank: string): any;
     highScore: number;
-    setHighScore: any;
+    setHighScore(score: number): any;
     points: number;
-    setPoints: any;
+    setPoints(points: number): any;
     mistakes: number;
-    setMistakes: any;
+    setMistakes(mistakes: number): any;
 }
 
 const Game = ({...props}: gameProps) => {
@@ -27,7 +27,6 @@ const Game = ({...props}: gameProps) => {
     }
 
     const currentGameDataSet: any = gameDataSet(props.difficulty)
-
     currentGameDataSet.map((word: string) => {
         return (
             console.log(word), 
