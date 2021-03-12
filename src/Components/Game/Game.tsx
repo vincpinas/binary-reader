@@ -21,20 +21,21 @@ interface gameProps {
 
 const Game = ({...props}: gameProps) => {
     const currentGameDataSet: any = chooseDataSet(props.difficulty, WordDataSets)
-    currentGameDataSet.map((word: string) => {
-        return (
-            console.log(word), 
-            console.log(textToBinary(word))
-        )
-    })
-    
+
     return (
         <React.Fragment>
             <div className="c-game">
                 <UserInfo userName={props.userName} rank={props.rank} highScore={props.highScore} points={props.points} mistakes={props.mistakes}/>
                 <main className="gameContainer">
                     <div className="gameDisplay">
-                        
+                    { currentGameDataSet.map((word: string, key: number) => {
+                        return (
+                            <div key={key}>
+                                <p>{word}</p>
+                                <p>{textToBinary(word)}</p>
+                            </div>
+                        )
+                    })}
                     </div>
                     <input className="gameInput"/>
                 </main>

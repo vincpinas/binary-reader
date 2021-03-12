@@ -21,6 +21,30 @@
 }
 
 .difficultyButton:hover {
-    color: rgb(255, 22, 22);
+    animation: red-rainbow 2s infinite ease-in ;
     font-size: 2.4em;
+}
+
+@keyframes red-rainbow {
+    0% { color: #e6e6e6}
+    5% { color: #ff8383}
+    10% { color: #ff4d4d}
+    15% { color: #c42626}
+    20% { color: #7a0000}
+    25% { color: #3d0000}
+    30% { color: #7a0000}
+    35% { color: #c42626}
+    40% { color: #ff4d4d}
+    45% { color: #ff8383}
+    50% { color: #e6e6e6}
+    55% { color: #ff8383}
+    60% { color: #ff4d4d}
+    65% { color: #c42626}
+    70% { color: #7a0000}
+    75% { color: #3d0000}
+    80% { color: #7a0000}
+    85% { color: #c42626}
+    90% { color: #ff4d4d}
+    95% { color: #ff8383}
+    100% { color: #e6e6e6}
 }
