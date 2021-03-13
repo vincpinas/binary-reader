@@ -15,3 +15,10 @@ export const chooseDataSet = (difficulty: string, dataSets: any) => {
     else if (difficulty === 'normal') return dataSets.normal
     else if (difficulty === 'hard') return dataSets.hard
 }
+
+export const pointSpread = (difficulty: string) => {
+    if (difficulty === 'easy') return 5
+    else if (difficulty === 'normal') return 8
+    else if (difficulty === 'hard') return 12
+    return 0
+}

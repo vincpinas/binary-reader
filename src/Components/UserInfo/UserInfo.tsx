@@ -14,6 +14,7 @@ interface userInfoProps {
     highScore: number;
     points: number;
     mistakes: number;
+    setRank(rank: string): any;
 }
 
 const UserInfo = ({...props}: userInfoProps) => {
@@ -26,6 +27,14 @@ const UserInfo = ({...props}: userInfoProps) => {
         else if(props.rank === 'Expert') setRankImage(ExpertRank)
         else if(props.rank === 'Master') setRankImage(MasterRank)
     }, [props.rank])
+
+    useEffect(() => {
+        if(props.points >= 160) props.setRank('Master')
+        else if(props.points >= 120) props.setRank('Expert')
+        else if(props.points >= 80) props.setRank('Intermediate')
+        else if(props.points >= 40) props.setRank('Beginner')
+        else if(props.points >= 0) props.setRank('Novice')
+    }, [props.points, props])
 
     return (
         <div className="c-user-info">

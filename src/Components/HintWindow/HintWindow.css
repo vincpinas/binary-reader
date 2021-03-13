@@ -1,0 +1,34 @@
+.c-hint-window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.hintWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #1f1f1f;
+}
+
+.hintButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.hintButton {
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px 5px 0px 0px;
+    color: #d8d8d8;
+    background-color: #1f1f1f;
+    border: none;
+    outline: none;
+}
