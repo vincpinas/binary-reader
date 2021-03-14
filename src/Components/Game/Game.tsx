@@ -31,16 +31,24 @@ const Game = ({...props}: gameProps) => {
 
     const endGame = () => {
         setCurrentIndex(0)
+        props.setHighScore(props.points)
+        props.setPoints(0)
     }
 
     const checkCondition = () => {
         if (currentGameDataSet.length === currentIndex + 1) {
             endGame()
+        } else if (props.points < -30) {
+            endGame()
         } else if (currentGameDataSet[currentIndex] === answer) {
             setCurrentIndex(currentIndex + 1)
             props.setPoints(props.points + pointSpread(props.difficulty))
             setAnswer('')
-        } else {
+        } else if (currentGameDataSet[currentIndex] !== answer && props.mistakes > 3) {
+            props.setPoints(props.points - pointSpread(props.difficulty))
+            props.setMistakes(props.mistakes + 1)
+            setAnswer('')
+        } else if (currentGameDataSet[currentIndex] !== answer) {
            props.setMistakes(props.mistakes + 1)
            setAnswer('')
         }
