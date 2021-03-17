@@ -57,7 +57,7 @@ const Game = ({...props}: gameProps) => {
     return (
         <React.Fragment>
             <div className="c-game">
-                <UserInfo userName={props.userName} rank={props.rank} setRank={props.setRank} highScore={props.highScore} points={props.points} mistakes={props.mistakes}/>
+                <UserInfo userName={props.userName} rank={props.rank} setRank={props.setRank} highScore={props.highScore} points={props.points} mistakes={props.mistakes} difficulty={props.difficulty}/>
                 <HintWindow mistakes={props.mistakes} currentItem={currentGameDataSet[currentIndex]}/>
                 <main className="gameContainer">
                     <div className="gameTrack" style={{width: trackerWidth }}/>

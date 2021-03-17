@@ -3,9 +3,12 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
-    text-align: center;
     height: 100vh;
     border-right: 2px solid #4d4d4d70;
+}
+
+.c-user-info p {
+    display: inline-block;
 }
 
 .userRankImg, .userRankImg img {
@@ -15,17 +18,11 @@
 }
 
 .userInfoText {
-    border-bottom: 2px solid gray;
     padding: 10px;
+    text-align: center;
 }
 
 .userInfoStats {
-    text-align: left;
-    border-bottom: 2px solid #808080;
-    padding: 10px;
-}
-
-.userInfoHighScore {
     padding: 10px;
 }
 

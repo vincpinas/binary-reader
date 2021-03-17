@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Join.css'
 
 import AnimeBackground from '../AnimeBackground/AnimeBackground';
+import { getDayPeriod } from '../Helpers'
 
 interface joinProps {
     userName: string;
@@ -11,27 +12,13 @@ interface joinProps {
 }
 
 const Join = ({setUserName, userName}: joinProps) => {
-    const date = new Date();
-    const currentHour = date.getHours()
-
-    const getCurrentTime = () => {
-        if(currentHour >= 18) {
-            return "Good Evening,"
-        } else if(currentHour >= 12) {
-            return "Good Afternoon,"
-        } else {
-            return "Good Morning,"
-        }
-    }
-
-
     return (
         <React.Fragment>
             <AnimeBackground bgrq="Join"/>
             <div className="c-join">
                 <form>
                     <div className="joinHeading">
-                        <h2>{getCurrentTime()}</h2>
+                        <h2>{getDayPeriod()}</h2>
                         <h4>Please fill in a username.</h4>
                     </div>
                     <input placeholder="Enter Name.." className="joinInput" type="text" onChange={(event) => setUserName(event.target.value)}/>

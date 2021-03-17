@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
+      <Router basename='/binary'>
         <Switch>
           <Route path='/' exact render={(props) => (<Join setUserName={setUserName} userName={userName}/>)} />
           <Route path='/difficulty' render={(props) => (<DifficultySelector setDifficulty={setDifficulty}/>)} />

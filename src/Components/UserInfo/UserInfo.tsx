@@ -14,6 +14,7 @@ interface userInfoProps {
     highScore: number;
     points: number;
     mistakes: number;
+    difficulty: string;
     setRank(rank: string): any;
 }
 
@@ -46,11 +47,14 @@ const UserInfo = ({...props}: userInfoProps) => {
                     <h4>{props.userName}</h4>
                     <h5 className={props.rank}>{props.rank}</h5>
                 </div>
+                <div className={`userInfoStats  ${props.rank}Border`}>
+                    <p>Difficulty: {props.difficulty}</p>
+                </div>
                 <div className={`userInfoStats ${props.rank}Border`}>
                     <p>Points: {props.points}</p>
                     <p>Mistakes: {props.mistakes}</p>
                 </div>
-                <div className={`userInfoHighScore ${props.rank}Border`}>
+                <div className={`userInfoStats  ${props.rank}Border`}>
                     <p>HighScore: {props.highScore}</p>
                 </div>
             </div>
